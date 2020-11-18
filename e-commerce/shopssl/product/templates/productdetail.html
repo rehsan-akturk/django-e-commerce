@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block content %}
+
+ <div class="col-md-8" style="padding:15px;">
+            <div    style="display:inline-block; border:solid 1px #808080; padding:30px ">
+           
+                <div>
+                    <img class="img-responsive" alt="eCommerce Product List" src="http://www.prepbootstrap.com/Content/images/template/productslider/product_003.jpg" />
+                    <br />
+                    <h2 class="pull-right">${{products.price}}</h2>
+                    <h2><a href="#">{{products.name}}r</a></h2>
+                    <br />
+                    <p class="text-justify">{{products.details}}</p>
+                </div>
+                <br />
+                <div class="ratings text-center">
+                    <p>
+                        <div id="rating1"></div>
+                        
+                    </p>
+                </div>
+                <br />
+                <div  style="padding-bottom: 30px">
+                    <a class="p-3 mb-2 bg-dark text-white"> Sepete Ekle</a>
+                   
+                </div>
+               
+            </div>
+             
+        </div>
+
+{% endblock content %}

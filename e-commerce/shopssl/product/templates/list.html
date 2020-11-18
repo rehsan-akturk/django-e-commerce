@@ -1,0 +1,99 @@
+{% extends 'layout.html' %}
+
+
+
+{% block content %}
+
+  <br>  <br>
+<div class="container">
+    <div class="row">
+    {% if products %}
+    {% for i in products %}
+        <div class="col-md-4" style="padding:15px;">
+            <div style="display:inline-block; border:solid 1px #808080; padding:15px">
+           
+                <div>
+                    <img class="img-responsive" alt="eCommerce Product List" src="http://www.prepbootstrap.com/Content/images/template/productslider/product_003.jpg" />
+                    <br />
+                    <h2 class="pull-right">${{i.price}}</h2>
+                    <h2><a href="#">{{i.name}}r</a></h2>
+                    <br />
+                    <p class="text-justify">{{i.details}}</p>
+                </div>
+                <br />
+                <div class="ratings text-center">
+                    <p>
+                        <div id="rating1"></div>
+                        
+                    </p>
+                </div>
+                <br />
+                <div  style="padding-bottom: 30px">
+                    <a class="p-3 mb-2 bg-dark text-white"> Sepete Ekle</a>
+                    <a class="p-3 mb-2 bg-dark text-white" href="{% url  'product:productdetail' i.slug %}" >  İncele</a>
+                </div>
+               
+            </div>
+             
+        </div>
+        
+{% endfor %}
+{% endif %}
+              
+                
+<!-- you need to include the shieldui css and js assets in order for the charts to work -->
+<link rel="stylesheet" type="text/css" href="http://www.shieldui.com/shared/components/latest/css/light/all.min.css" />
+<script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
+
+<script type="text/javascript">
+    jQuery(function ($) {
+        $('#rating1').shieldRating({
+            max: 5,
+            step: 1,
+            value: 3,
+            markPreset: false
+        });
+
+        $('#rating2').shieldRating({
+            max: 5,
+            step: 1,
+            value: 4,
+            markPreset: false
+        });
+        $('#rating3').shieldRating({
+            max: 5,
+            step: 1,
+            value: 2,
+            markPreset: false
+        });
+        $('#rating4').shieldRating({
+            max: 5,
+            step: 1,
+            value: 3,
+            markPreset: false
+        });
+
+        $('#rating5').shieldRating({
+            max: 5,
+            step: 1,
+            value: 4,
+            markPreset: false
+        });
+        $('#rating6').shieldRating({
+            max: 5,
+            step: 1,
+            value: 2,
+            markPreset: false
+        });
+    });
+</script>
+
+<style>
+
+</style>
+
+  </div>
+</div>
+</div>
+
+{% endblock content %}
