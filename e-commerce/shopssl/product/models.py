@@ -7,7 +7,6 @@ from django.template.defaultfilters import slugify
 class Category(models.Model):
     name=models.CharField(max_length=200, db_index=True)
     slug = models.SlugField(max_length=200, unique=True)
-    photo=models.ImageField(upload_to='products_category')
     date=models.DateField(auto_now=True)
 
     class Meta:
@@ -22,7 +21,6 @@ class Category(models.Model):
 class Subcategory(models.Model):
     subcategory_title = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200, unique=True)
-    subcategory_image = models.ImageField()
     subcategory_category = models.ForeignKey(
         Category, default=1, verbose_name="Category", on_delete=models.SET_DEFAULT)
 

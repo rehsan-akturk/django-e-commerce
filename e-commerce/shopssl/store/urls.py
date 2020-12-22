@@ -9,8 +9,6 @@ urlpatterns = [
     
     path('', views.index, name='home'),
 
-    #path('ssl/', views.post, name='post'),
-    #path('ssl/<path:hierarchy>/', views.show_category,name='category'),
-    #path('<slug:slug>/', views.postdetail,name='postdetail'),
+   
     
 ]

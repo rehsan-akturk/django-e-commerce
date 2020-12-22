@@ -6,6 +6,7 @@ from django.core.paginator import Paginator, EmptyPage
 
 
 
+
 # Create your views here.
 
 def index(request):

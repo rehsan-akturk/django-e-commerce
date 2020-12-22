@@ -8,6 +8,7 @@ app_name = "product"
 urlpatterns = [
 
     path('product/', views.product_list, name='product'),
+    path('product/<path:hierarchy>/', views.show_category,name='category'),
     path('<slug:slug>/', views.productdetail,name='productdetail'),
     
     

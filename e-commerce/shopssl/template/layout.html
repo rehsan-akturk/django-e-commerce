@@ -42,8 +42,8 @@
               Ürünler
             </a>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <a class="dropdown-item" href="/comodo/">COMODO</a>
-            <a class="dropdown-item" href="/sslrapid/">Rapid SSL</a>
+            <a class="dropdown-item" href="/product/comodo/">COMODO</a>
+            <a class="dropdown-item" href="/product/rapid/">Rapid SSL</a>
             </div>
            </div>
         </li>
@@ -53,11 +53,22 @@
           <li class="nav-item">
             <a class="nav-link" href="/contact/">CONTACT</a>
           </li>
+         
+          {% if user.is_authenticated %}
           <li class="nav-item">
-            <a class="nav-link" href="#">GİRİŞ</a>
+            <a class="nav-link" href="/logout/">ÇIKIŞ YAP</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">KAYDOL</a>
+            <a class="nav-link" href="#">Hoşgeldin, {{user.username}}</a>
+          </li>
+         {% else %}
+       <li class="nav-item">
+            <a class="nav-link" href="/login/">GİRİŞ</a>
+          </li>
+                {% endif %}
+
+          <li class="nav-item">
+            <a class="nav-link" href="/register/">KAYDOL</a>
           </li>
         </ul>
       </div>
@@ -77,7 +88,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+      <p class="m-0 text-center text-white">&copy; SSL DESTEK 2020</p>
     </div>
     <!-- /.container -->
   </footer>
