@@ -94,8 +94,8 @@ DATABASES = {
     'ENGINE':'sql_server.pyodbc',
     'NAME':'shopssl',
     'USER':'sa',
-    'PASSWORD': '1qa2ws3ed',
-    'HOST':'DESKTOP-JSQ73E8\MSSQLSERVER01',
+    'PASSWORD': '',
+    'HOST':'MSSQLSERVER01',
     'PORT': '',
     'OPTIONS': {
     'driver':'ODBC Driver 17 for SQL Server',
